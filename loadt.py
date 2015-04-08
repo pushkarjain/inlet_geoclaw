@@ -1,13 +1,18 @@
+#============================================#
+# Script for visualization of 3d scatter with 
+# point selection
+#============================================#
+
 import numpy as np
 import matplotlib.pyplot as plt
 import os
 from mpl_toolkits.mplot3d import Axes3D
 
 
-#x = np.loadtxt("output.txt", unpack=True)
-x = np.loadtxt("boundary_points.txt", unpack=True)
-#if os.path.isfile("boundary_points.txt"):
-#    os.remove("boundary_points.txt")
+x = np.loadtxt("output.txt", unpack=True)
+#x = np.loadtxt("boundary_points.txt", unpack=True)
+if os.path.isfile("scratch.txt"):
+    os.remove("scratch.txt")
 
 def onpick3(event):
     ind = event.ind
@@ -25,3 +30,5 @@ ax.set_ylabel("y")
 ax.set_zlabel("z")
 fig.canvas.mpl_connect('pick_event', onpick3)
 plt.show()
+
+print "The selected points are written in scratch.txt"

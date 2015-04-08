@@ -45,4 +45,6 @@ dstacked = np.dstack((xv,yv,Z))
 with file('output.txt','w') as outfile:
     for slice_2d in dstacked:
         np.savetxt(outfile,slice_2d)
+
+print "\nNew mesh is in output.txt"
 #np.savetxt("hello.out",np.c_[xv,yv,Z],newline=" ")
