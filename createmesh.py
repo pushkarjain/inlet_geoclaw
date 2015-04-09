@@ -1,3 +1,5 @@
+#!/usr/bin/env python
+
 import numpy as np
 
 # Get the boundary points
@@ -9,8 +11,9 @@ bottom_right_y = min(boundary_data[1])
 print("\ntop_left_x = %f, top_left_y = %f, bottom_right_x = %f, bottom_right_y = %f" %(top_left_x, top_left_y, bottom_right_x, bottom_right_y))
 
 # Mesh size for structured mesh
-print("\nMesh size for structured mesh is %f",%(h))
 h = 25.0
+print("\nMesh size for structured mesh is %f" % (h))
+
 
 # Create the mesh
 x_intervals = (-top_left_x+bottom_right_x)/h

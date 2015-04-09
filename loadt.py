@@ -1,3 +1,5 @@
+#!/usr/bin/env python
+
 #============================================#
 # Script for visualization of 3d scatter with 
 # point selection
